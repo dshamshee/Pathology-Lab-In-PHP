@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patholab</title>
+    <link rel="stylesheet" href="src/output.css" class="src">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        #dropdownMenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #dropdownButton:focus+#dropdownMenu,
+        #dropdownMenu:hover {
+            display: block;
+        }
+
+        
+
+
+    </style>
+</head>
+
+<body class="">
+    <div class="container bg-[url('https://images.pexels.com/photos/8879123/pexels-photo-8879123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-no-repeat bg-[length:100vw_100vh] w-screen h-screen flex justify-center">
+        <nav
+            class=" text-white font-semibold mt-2 w-[75%] h-16 items-center justify-between pl-5 pr-5 rounded-md  flex flex-row gap-10">
+            <span class="text-white text-5xl"><i class='bx bxs-vial bx-tada'></i></span>
+            <ul class=" flex flex-row gap-14">
+                <li><a href="#">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><select class=" bg-transparent rounded-md " name="Options" id="Options">
+                        <option class="bg-transparent text-black" value="Select">Operations</option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/forms/Patient.php">Add Patient</option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/Forms/Pathologist.php">Add Pathologist
+                        </option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/Forms/Test.php">Add Test</option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/Forms/Employee.php">Add Employee</option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/Forms/Admin.php">Add Admin</option>
+                    </select></li>
+
+                <li><select class=" bg-transparent rounded-md" name="Options" id="Options2">
+                        <option class="bg-transparent text-black" value="Select">Records</option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/DisplayRecords/displayAdmin.php">Admin's
+                        </option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/DisplayRecords/DisplayEmployee.php">
+                            Employee's</option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/DisplayRecords/DisplayPathologist.php">
+                            Pathologists</option>
+                        <option class="bg-transparent text-black"
+                            value="http://localhost:5000/Patholab%20in%20PHP/DisplayRecords/DisplayTest.php">Tests
+                        </option>
+                    </select></li>
+
+            </ul>
+        </nav>
+    </div>
+    
+
+    <script>
+        // JavaScript for redirection
+        document.getElementById('Options').addEventListener('change', function () {
+            const selectedValue = this.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        });
+
+
+        document.getElementById('Options2').addEventListener('change', function () {
+            const selectedValue = this.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -41,6 +41,7 @@ $result = display_Test();
 
     <!-- Admin Table -->
     <h2 class="font-bold text-3xl text-center mt-2 mb-5">Test Records</h2>
+    <button class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold"><a href="../Forms/test.php"> Add New</a></button>
     <!-- <h1 class="bg-red-500">Danish</h1> -->
     <table>
         <tr>
@@ -66,7 +67,7 @@ $result = display_Test();
         <td><?php echo $row['MinRange'] ?></td>
         <td><?php echo $row['MaxRange'] ?></td>
         <td><?php echo $row['Chid'] ?></td>
-        <td ><a href="#" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
+        <td ><a href="../Forms/editTest.php?Tid=<?php echo $row['Tid']; ?>" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
         <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td>
     </tr>
     <?php 

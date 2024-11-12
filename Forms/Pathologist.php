@@ -14,7 +14,7 @@ $PH_ID = $Name = $Qualification = $Phone = $AdharNo = $Address = $Commission = "
 
         insertPathologist($PH_ID, $Name, $Qualification, $Phone, $AdharNo, $Address, $Commission);
         header("location: /Patholab in PHP/DisplayRecords/displayPathologist.php");
-        // $PH_ID = $Name = $Qualification = $Phone = $AdharNo = $Address = $Commission = "";
+        $PH_ID = $Name = $Qualification = $Phone = $AdharNo = $Address = $Commission = "";
 
     }
     ?>
@@ -47,7 +47,7 @@ $PH_ID = $Name = $Qualification = $Phone = $AdharNo = $Address = $Commission = "
         <input required="" class="input" type="text" name="Address" id="Address" placeholder="Address"  value="<?php echo htmlspecialchars($Address); ?>">
         <input required="" class="input" type="text" name="Commission" id="Commission" placeholder="Commission"  value="<?php echo htmlspecialchars($Commission); ?>">
         <input class="login-button" name="submit" type="submit" value="Add">
-      <a class="login-button" style="text-decoration: none; color: white; text-align: center;" href="../DisplayRecords/DisplayPathologist.php">Cancel</a>
+        <a class="login-button" style="text-decoration: none; color: white; text-align: center;" href="../DisplayRecords/DisplayPathologist.php">Cancel</a>
 
       </form>
     </div>

@@ -41,6 +41,8 @@ $result = display_Employee();
 
     <!-- Admin Table -->
     <h2 class="font-bold text-3xl text-center mt-2 mb-5">Employee's Records</h2>
+    <button class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold"><a href="../Forms/Employee.php"> Add New</a></button>
+
     <table>
         <tr>
             <th>Name</th>
@@ -67,7 +69,7 @@ $result = display_Employee();
         <td><?php echo $row['address'] ?></td>
         <td><?php echo $row['Profession'] ?></td>
         <td><?php echo $row['salary'] ?></td>
-        <td ><a href="#" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
+        <td ><a href="../Forms/editEmployee.php?phone=<?php echo $row['Phone']; ?>" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
         <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td>
     </tr>
     <?php 
