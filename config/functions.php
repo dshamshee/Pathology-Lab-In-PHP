@@ -191,6 +191,18 @@ function update_employee($fullName, $phone,  $adharNO, $gender, $address, $Profe
 
 
 
+// Delete Employee Data
+function deleteEmployee($phone) {
+    global $conn;
+    $query = "DELETE FROM employee WHERE Phone = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $phone);
+    $stmt->execute();
+    $stmt->close();
+}
+
+
+
 
 
 
