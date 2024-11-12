@@ -263,7 +263,15 @@ function update_Test($Tid, $TName, $Cost, $MinRange, $MaxRange, $Chid) {
 }
 
 
-
+// Delete Employee Data
+function deleteTest($Tid) {
+    global $conn;
+    $query = "DELETE FROM test WHERE Tid = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $Tid);
+    $stmt->execute();
+    $stmt->close();
+}
 
 
 ?>

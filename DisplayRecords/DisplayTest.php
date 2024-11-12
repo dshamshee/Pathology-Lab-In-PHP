@@ -68,7 +68,13 @@ $result = display_Test();
         <td><?php echo $row['MaxRange'] ?></td>
         <td><?php echo $row['Chid'] ?></td>
         <td ><a href="../Forms/editTest.php?Tid=<?php echo $row['Tid']; ?>" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
-        <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td>
+        <!-- <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td> -->
+        <td>
+    <a href="deleteTest.php?Tid=<?php echo $row['Tid']; ?>" 
+       class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">
+       Delete
+    </a>
+</td>
     </tr>
     <?php 
         }
