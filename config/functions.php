@@ -82,6 +82,18 @@ function update_admin($username, $firstName, $lastName, $email, $password) {
 
 
 
+// Delete Admin Data
+function deleteAdmin($username) {
+    global $conn;
+    $query = "DELETE FROM admin WHERE Admin_User_Name = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->close();
+}
+
+
+
 
 // Insert  Pathologist Data
 function insertPathologist($PH_ID, $Name, $Qualification, $Phone, $AdharNo, $Address, $Commission) {

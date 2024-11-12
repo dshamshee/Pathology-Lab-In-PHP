@@ -66,7 +66,14 @@ $result = display_admin();
         <td><?php echo $row['password'] ?></td>
         <td><?php echo $row['email'] ?></td>
         <td ><a href="../Forms/editAdmin.php?username=<?php echo $row['Admin_User_Name']; ?>" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
-        <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td>
+        <!-- <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td> -->
+        <td>
+    <a href="deleteAdmin.php?username=<?php echo $row['Admin_User_Name']; ?>" 
+       class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">
+       Delete
+    </a>
+</td>
+
     </tr>
     <?php 
         }
