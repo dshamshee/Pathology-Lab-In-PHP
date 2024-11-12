@@ -3,6 +3,12 @@
 require_once '../config/db.php';
 require_once '../config/functions.php';
 
+
+
+
+
+
+
 $result = display_Pathologist();
 
 ?>
@@ -70,16 +76,17 @@ $result = display_Pathologist();
         <td><?php echo $row['Address'] ?></td>
         <td><?php echo $row['Commission'] ?></td>
         <td ><a href="#" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
-        <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td>
+        <!-- <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td> -->
+        <td>
+    <a href="deletePathologist.php?PH_ID=<?php echo $row['PH_ID']; ?>" 
+       class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">
+       Delete
+    </a>
+</td>
     </tr>
     <?php 
         }
         ?>  
-        
-        
-
-
-
 
 </table>
 </div>

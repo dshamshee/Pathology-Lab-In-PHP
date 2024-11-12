@@ -118,6 +118,16 @@ function insertPathologist($PH_ID, $Name, $Qualification, $Phone, $AdharNo, $Add
 
 
 
+// Delete Employee Data
+function deletePathologist($PH_ID) {
+    global $conn;
+    $query = "DELETE FROM Pathologist WHERE PH_ID = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $PH_ID);
+    $stmt->execute();
+    $stmt->close();
+}
+
 
 
 
