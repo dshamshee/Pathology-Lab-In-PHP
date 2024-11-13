@@ -1,6 +1,6 @@
 <?php
 require_once 'config/db.php'; // Include your functions.php for database connection
-if (isset($_POST['login'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $conn;
     $Admin_User_Name = mysqli_real_escape_string($conn, $_POST['Admin_User_Name']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
