@@ -118,6 +118,31 @@ function insertPathologist($PH_ID, $Name, $Qualification, $Phone, $AdharNo, $Add
 
 
 
+
+function fetch_pathologist($PH_ID) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM Pathologist WHERE PH_ID = ?");
+    $stmt->bind_param("s", $PH_ID);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_assoc();
+}
+
+
+
+function update_pathologist($PH_ID, $Name, $Qualification, $Phone, $AdharNo, $Address, $Commission) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE Pathologist SET Name = ?, Qualification = ?, Phone = ?, AdharNo = ?, Address = ?, Commission = ? WHERE PH_ID = ?");
+    $stmt->bind_param("sssssss", $Name, $Qualification, $Phone, $AdharNo, $Address, $Commission, $PH_ID);
+    $stmt->execute();
+    echo "Record updated successfully";
+    $stmt->close();
+}
+
+
+
+
+
 // Delete Employee Data
 function deletePathologist($PH_ID) {
     global $conn;

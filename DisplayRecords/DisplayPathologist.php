@@ -47,6 +47,7 @@ $result = display_Pathologist();
 
     <!-- Admin Table -->
     <h2 class="font-bold text-3xl text-center mt-2 mb-5">Pathologist's Records</h2>
+    <button class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold"><a href="../Home.html">Home</a></button>
     <button class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold"><a href="../Forms/Pathologist.php"> Add New</a></button>
 
     <table>
@@ -75,7 +76,9 @@ $result = display_Pathologist();
         <td><?php echo $row['AdharNo'] ?></td>
         <td><?php echo $row['Address'] ?></td>
         <td><?php echo $row['Commission'] ?></td>
-        <td ><a href="#" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
+        <!-- <td ><a href="#" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td> -->
+        <td><a href="../Forms/EditPathologist.php?PH_ID=<?php echo $row['PH_ID']; ?>" class="bg-blue-600 hover:bg-blue-800 text-white p-1 pr-2 pl-2 rounded-md font-bold">Edit</a></td>
+
         <!-- <td><button class="bg-red-600 hover:bg-red-800 text-white p-1 rounded-md font-bold">Delete  </button></td> -->
         <td>
     <a href="deletePathologist.php?PH_ID=<?php echo $row['PH_ID']; ?>" 
