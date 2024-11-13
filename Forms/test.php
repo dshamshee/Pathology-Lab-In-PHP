@@ -43,6 +43,8 @@ $Tid = $TName = $Cost = $MinRange = $MaxRange = $Chid = "";
       <input required="" class="input" type="text" name="MaxRange" id="MaxRang" placeholder="MaxRange" value="<?php echo htmlspecialchars($MaxRange); ?>">
       <input required="" class="input" type="text" name="Chid" id="Chid" placeholder="Chid" value="<?php echo htmlspecialchars($Chid); ?>">
       <input class="login-button" name="submit" type="submit" value="Add">
+      <a class="login-button" style="text-decoration: none; color: white; text-align: center;" href="../DisplayRecords/DisplayTest.php">Cancel</a>
+
     </form>
   </div>
   </div>

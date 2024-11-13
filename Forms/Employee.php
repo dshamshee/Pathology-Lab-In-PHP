@@ -51,6 +51,8 @@ $Full_Name = $Phone = $AdharNO = $Gender = $address = $profession = $salary = ""
             <input required="" class="input" type="text" name="profession" id="Profession" placeholder="Profession" value="<?php echo htmlspecialchars($profession); ?>">
             <input  required="" class="input"type="text" name="salary" id="Salary" placeholder="Salary" value="<?php echo htmlspecialchars($salary); ?>">
             <input class="login-button" name="submit"  type="submit" value="Add">
+        <a class="login-button" style="text-decoration: none; color: white; text-align: center;" href="../DisplayRecords/DisplayEmployee.php">Cancel</a>
+
         </form>
 
     </div>

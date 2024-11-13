@@ -66,6 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input required="" class="input" type="text" name="pdate" id="pdate" value="<?php echo htmlspecialchars($currentDate); ?>" readonly>
         <input required="" class="input" type="text" name="refby" id="refby" placeholder="refby">
         <input class="login-button" type="submit" value="Add">
+        <a class="login-button" style="text-decoration: none; color: white; text-align: center;" href="../Home.html">Cancel</a>
+
       </form>
     </div>
   </div>
