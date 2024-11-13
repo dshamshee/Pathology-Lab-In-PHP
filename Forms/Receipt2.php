@@ -90,7 +90,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 selectedTests.push(selectedTest);
                 displayTests();
             }
+
+
+            const button = document.getElementById('addTest');
+            button.disabled = true; // Disables the button
+        
         }
+
+        
 
         function displayTests() {
             const tableBody = document.getElementById('testTableBody');
@@ -171,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endforeach; ?>
             </select>
         </label>
-        <button type="button" onclick="addTest()">Add Test</button>
+        <button id="addTest" type="button" onclick="addTest()">Add Test</button>
     </div>
 
     <h3>Selected Tests</h3>
@@ -200,5 +207,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <button type="button" onclick="saveReceipt()">Save</button>
 </div>
+
+
+
 </body>
 </html>
