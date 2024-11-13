@@ -19,7 +19,7 @@
           <input required class="input" type="Admin_User_Name" name="Admin_User_Name" id="Admin_User_Name" placeholder="Username">
           <input required class="input" type="password" name="password" id="password" placeholder="Password">
           <span class="forgot-password"><a href="forgot_password.php">Forgot Password?</a></span>
-          <input class="login-button" type="submit" name="login" value="Sign In">
+          <button class="login-button" type="submit" name="login" value="Sign In"><a href="http://localhost:5000/Patholab%20in%20PHP/login.php">Sign In</a></button>
         </form>
 
         <!-- <div class="social-account-container">
@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<!-- <?php
+<?php
 require_once 'config/db.php'; // Include your functions.php for database connection
 if (isset($_POST['login'])) {
     global $conn;
@@ -60,7 +60,7 @@ if (isset($_POST['login'])) {
         echo "<script>alert('Incorrect Admin_User_Name or password. Please try again.');</script>";
     }
 }
-?> -->
+?>
 
 <!-- <script src="script.js"></script> -->
 </body>
