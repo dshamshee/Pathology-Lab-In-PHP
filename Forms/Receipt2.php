@@ -58,6 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Redirect or show success message
         echo "Bill saved successfully!";
+        header("location: /Patholab in PHP/Home.html");
+
     } else {
         echo "Error saving bill: " . mysqli_error($conn);
     }
